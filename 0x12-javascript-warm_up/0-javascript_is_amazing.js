@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// Prints a string that is in a var
+// Prints string “JavaScript is amazing”
 
 const myVar = 'JavaScript is amazing';
 
