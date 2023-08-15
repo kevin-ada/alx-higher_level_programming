@@ -21,11 +21,7 @@ module.exports = class Rectangle {
   }
 
   double () {
-    let temp = this.width;
-    temp = temp * 2;
-    this.width = temp;
-    temp = this.height;
-    temp = temp * 2;
-    this.height = temp;
+      this.width *= 2;
+    this.height *= 2;
   }
 };
