@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-//const
+// const
 
 myVar = 333;
