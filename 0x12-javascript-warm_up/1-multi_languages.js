@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
-console.log('C is fun');
+//languages
 
-console.log('Python is cool');
+console.log("C is fun\nPython is cool\nJavascript is amazing");
 
-console.log('Javascript is amazing');
