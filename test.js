@@ -1,12 +1,13 @@
-// Be used for testing
+///Test
 
 
-let b = 1;
+let a = 30;
+let b = 20;
 
-function myFunction(a) {
-    console.log(a + b);
-    b = a;
-}
+let c = a
+a = b
+b = c
 
-myFunction(3);
-myFunction(4);
+console.log(a, b, c)
+
+
