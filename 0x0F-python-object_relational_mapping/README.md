@@ -1,14 +1,7 @@
-# 0x0F. Python - Object-relational mapping
+## 0x0F. Python - Object-relational mapping
 
-> Python
-> OOP
-> SQL
-> ORM
-> SQLAlchemy
-
-## Background Context
-
-In this project, you will link two amazing worlds: Databases and Python!
+> Background Context
+in this project, you will link two amazing worlds: Databases and Python!
 
 In the first part, you will use the module MySQLdb to connect to a MySQL database and execute your SQL queries.
 
@@ -28,9 +21,7 @@ for row in query_rows:
 cur.close()
 conn.close()
 ```
-
 With an ORM:
-
 ```python
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "my_db"), pool_pre_ping=True)
 Base.metadata.create_all(engine)
@@ -39,32 +30,5 @@ session = Session(engine)
 for state in session.query(State).order_by(State.id).all(): # HERE: no SQL query, only objects!
     print("{}: {}".format(state.id, state.name))
 session.close()
-```
 
-### Resources
-> What is to be installed
-For installing MySQLdb, you need to have MySQL installed: How to install MySQL 8.0 in Ubuntu 20.04
-
-```ubuntu
-$ sudo apt-get install python3-dev
-$ sudo apt-get install libmysqlclient-dev
-$ sudo apt-get install zlib1g-dev
-$ sudo pip3 install mysqlclient
-...
-$ python3
->>> import MySQLdb
->>> MySQLdb.version_info 
-(2, 0, 3, 'final', 0)
-```
-
-> Install SQLAlchemy module version 1.4.x
-
-```ubuntu
-
-$ sudo pip3 install SQLAlchemy
-...
-$ python3
->>> import sqlalchemy
->>> sqlalchemy.__version__ 
-'1.4.22'
 ```
