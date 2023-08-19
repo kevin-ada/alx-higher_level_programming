@@ -3,7 +3,7 @@
 Module that lists all states from the database using MySQL
 """
 
-if _name_ == '_main_':
+if __name__ == '__main__':
 
     import MySQLdb
     import sys
