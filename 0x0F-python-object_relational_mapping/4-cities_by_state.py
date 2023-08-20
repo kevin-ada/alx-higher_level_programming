@@ -17,7 +17,9 @@ if __name__ == '__main__':
         )
 
     cursor = db.cursor()  # cursor object is used 4 execution of sql queries
-    cursor.execute("SELECT * FROM cities ORDER BY cities.id ASC;")
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
+		    INNER JOIN states on state_id = states.id \
+		    ORDER BY cities.id ASC;")
     mydata = cursor.fetchall()
 
     for row in mydata:
