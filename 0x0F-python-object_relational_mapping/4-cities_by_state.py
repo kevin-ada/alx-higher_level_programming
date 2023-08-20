@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
-Module that lists all states from the database using MySQL
+script that lists all cities, module used MySQLdb
 """
-
-if __name__ == '__main__':
-
+if __name__ == "__main__":
     import MySQLdb
     import sys
 
@@ -14,17 +12,13 @@ if __name__ == '__main__':
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3]
-        )
-
-    cursor = db.cursor()  # cursor object is used 4 execution of sql queries
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
-		    INNER JOIN states on state_id = states.id \
-		    ORDER BY cities.id ASC;")
-    mydata = cursor.fetchall()
-
+    )
+    c = db.cursor()
+    c.execute("SELECT cities.id, cities.name, states.name FROM cities\
+              INNER JOIN states ON state_id = states.id")
+    mydata = c.fetchall()
     for row in mydata:
         print(row)
 
-    cursor.close()
+    c.close()
     db.close()
-
