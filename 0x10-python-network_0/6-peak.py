@@ -1,16 +1,17 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+"""script for finding peak in list of ints, interview prep
+"""
 
-"""The function find_peak must be written in a file named 6-peak.py,
-    what the function will do is that it will loop through and find
-    the highest number in the list and return it.
-    """
+"""
+Find a peak in a list of unsorted integers.
+"""
 
 
 def find_peak(list_of_integers):
-    max_num = None
+    """BRUTE force implementation for question
+    """
+    max_i = None
     for i in list_of_integers:
-        if max_num is None:
-            max_num = i
-        elif i > max_num:
-            max_num = i
-    return max_num
+        if max_i is None or max_i < i:
+            max_i = i
+    return max_i
