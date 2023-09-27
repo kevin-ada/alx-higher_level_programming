@@ -2,12 +2,8 @@
 
 const fs = require('fs');
 
-const file = process.argv[2];
-
-fs.writeFile(file, process.argv[3], 'utf-8', (err) => {
-  if (err) {
-    throw err;
-  } else {
-    console.log('Complete');
-  }
-});
+try {
+  fs.writeFile(process.argv[2], process.argv[3], 'utf8', function (err) { if (err) console.log(err); });
+} catch (err) {
+  console.log(err);
+}
