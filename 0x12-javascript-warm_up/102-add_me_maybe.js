@@ -1,10 +1,8 @@
 #!/usr/bin/node
 
-//function increments
+// function increments
 
-exports.addMeMaybe = function(number, theFunction)
-{
-	number++;
-	theFunction(number);
-}
-
+exports.addMeMaybe = function (number, theFunction) {
+  number++;
+  theFunction(number);
+};
