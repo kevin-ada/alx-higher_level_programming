@@ -5,7 +5,7 @@ const fs = require('fs')
 const file  = process.argv[2]
 
 
-fs.writeFile(file, 'Python is cool', (err) => {
+fs.writeFile(file, process.argv[3], (err) => {
     if (err){
         throw err
     }
